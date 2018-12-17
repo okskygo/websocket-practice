@@ -1,0 +1,19 @@
+<html>
+<body>
+    <div id="root"></div>
+    <button id="button">Button</button>
+    <script>
+    	var conn = new WebSocket('ws://localhost:1234');
+		conn.onopen = function(e) {
+			console.log("Connection established!");
+		};
+		conn.onmessage = function(e) {
+			console.log(e.data);
+		};
+		var myButton = document.getElementById("button");
+		myButton.onclick = function(e) {
+		  conn.send("hello");
+		}
+    </script>
+</body>
+</html>
