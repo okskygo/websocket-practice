@@ -21,3 +21,4 @@ android/build/
 android/gen/
 android/out/artifacts
 android/target/
+*.DS_Store
